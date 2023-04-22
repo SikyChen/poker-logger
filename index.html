@@ -11,6 +11,11 @@
       display: flex;
       flex-direction: column;
     }
+    .reset-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
     .names {
       display: flex;
       justify-content: space-around;
@@ -26,7 +31,7 @@
     }
     .inputs input {
       width: 16%;
-      padding: 4px 10px;
+      padding: 8px 10px;
     }
     .btns {
       display: flex;
@@ -35,7 +40,7 @@
     }
     .btns button {
       width: 16%;
-      padding: 4px 10px;
+      padding: 8px 10px;
     }
 
     table {
@@ -49,6 +54,7 @@
   </style>
 </head>
 <body>
+  <button class="reset-btn" onclick="reset()">重置</button>
   <div>打牌记录</div>
 
   <div class="names">
@@ -73,7 +79,7 @@
     <button style="width: 100%;" onclick="handleAdd()">增加</button>
   </div>
 
-  <div style="padding: 10px">小计</div>
+  <div style="padding: 10px">总计</div>
 
   <table id="total" border="1px">
     <thead>
