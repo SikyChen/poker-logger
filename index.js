@@ -32,6 +32,11 @@ if (dataString) {
   refreshTable();
 }
 
+function reset() {
+  setData([]);
+  refreshTable();
+}
+
 function setData(d) {
   data = d;
   window.localStorage.setItem('data', JSON.stringify(data));
