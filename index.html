@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打牌记录</title>
+  <style>
+    body {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+    .names {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 8px;
+    }
+    .names div {
+      width: 20%;
+    }
+    .inputs {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 8px;
+    }
+    .inputs input {
+      width: 16%;
+      padding: 4px 10px;
+    }
+    .btns {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 8px;
+    }
+    .btns button {
+      width: 16%;
+      padding: 4px 10px;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    .records {
+      flex-grow: 1;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <div>打牌记录</div>
+
+  <div class="names">
+    <div>杨</div>
+    <div>图</div>
+    <div>陈</div>
+    <div>波</div>
+  </div>
+  <div class="inputs">
+    <input type="number" class="input" name="yang" id="yang">
+    <input type="number" class="input" name="tu" id="tu">
+    <input type="number" class="input" name="chen" id="chen">
+    <input type="number" class="input" name="bo" id="bo">
+  </div>
+  <div id="set-btns" class="btns">
+    <button class="set-btn" id="set-yang" onclick="setWinner('yang')">胜</button>
+    <button class="set-btn" id="set-tu" onclick="setWinner('tu')">胜</button>
+    <button class="set-btn" id="set-chen" onclick="setWinner('chen')">胜</button>
+    <button class="set-btn" id="set-bo" onclick="setWinner('bo')">胜</button>
+  </div>
+  <div class="btns">
+    <button style="width: 100%;" onclick="handleAdd()">增加</button>
+  </div>
+
+  <div style="padding: 10px">小计</div>
+
+  <table id="total" border="1px">
+    <thead>
+      <th>杨</th>
+      <th>图</th>
+      <th>陈</th>
+      <th>波</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="total-yang">1</td>
+        <td id="total-tu">2</td>
+        <td id="total-chen">3</td>
+        <td id="total-bo">4</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="padding: 10px">记录</div>
+
+  <table id="records" border="1px">
+    <thead>
+      <th width="30px">局</th>
+      <th width="23%">杨</th>
+      <th width="23%">图</th>
+      <th width="23%">陈</th>
+      <th width="23%">波</th>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script src="./index.js"></script>
+</body>
+</html>
